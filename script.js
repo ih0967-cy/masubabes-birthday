@@ -53,3 +53,24 @@ setInterval(()=>{
     Math.floor((d%86400000)/3600000)+" Hours "+
     Math.floor((d%3600000)/60000)+" Min";
 },1000);
+const form = document.getElementById("herForm");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = "none";
+        document.getElementById("afterSend").classList.remove("hidden");
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    });
+  });
+}
+
