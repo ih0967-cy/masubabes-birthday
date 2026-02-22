@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mysha — A Cinematic Story</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&family=Noto+Serif+Bengali:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgm" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="musicToggle">🔊</div>
+<div id="particles"></div>
+
+<!-- PAGE 1 -->
+<section class="page active bg1">
+  <div class="card">
+    <h1 class="name">Happy Birthday Mysha</h1>
+    <p class="subtitle">Some souls don’t enter your life… they arrive 💫</p>
+    <div id="countdown"></div>
+    <button onclick="nextPage()">Begin</button>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page bg2">
+  <div class="card wide">
+    <h1>Memories in Motion 📸</h1>
+    <p class="urdu">“Your smile takes away all my fatigue.”</p>
+
+    <div class="slider" id="slider">
+      <img src="photos/1.jpg">
+      <img src="photos/2.jpg">
+      <img src="photos/3.jpg">
+      <img src="photos/4.jpg">
+      <img src="photos/5.jpg">
+      <img src="photos/6.jpg">
+      <img src="photos/7.jpg">
+      <img src="photos/8.jpg">
+      <img src="photos/9.jpg">
+    </div>
+
+    <button onclick="nextPage()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page bg3">
+  <div class="card">
+    <h1>Feelings 🌙</h1>
+    <p>Love isn’t loud. It’s consistent. Quiet. Present.</p>
+    <p class="urdu">“Ishq woh hai jo lafzon ka mohtaaj nahi.”</p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page bg4">
+  <div class="card">
+    <h1>Gratitude 💐</h1>
+    <p>
+      I’m lucky — truly lucky.  
+      Lucky to have a bestie who understands silence.  
+      Lucky to feel safe sharing my chaos.  
+      Lucky to laugh even on hard days.  
+      Lucky… because life feels lighter with you.
+    </p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page bg5">
+  <div class="card">
+    <h1>Many Many Returns 🎉</h1>
+    <p>
+      May you live long, laugh often,  
+      and never stop shining ✨  
+      I love you from the bottom of my heart ❤️  
+      If forever exists… I want it with you.
+    </p>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page bg6">
+  <div class="card">
+    <h1>Before the Last Chapter 🔐</h1>
+    <p>Some words deserve a pause… and trust.</p>
+    <input type="password" id="pass" placeholder="Enter 4-digit code">
+    <button onclick="unlock()">Unlock</button>
+  </div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page bg7">
+  <div class="card handwritten">
+<pre>
+প্রিয় অনুরাধা,
+
+আজ তোমার জন্মদিন, আর এই special দিনে আমার 
+মনের সবটুকু ভালোবাসা দিয়ে তোমাকে কিছু বলতে চাই।
+আমাদের Friendship শুরু হওয়ার সেই দিনটা মনে আছে? 
+১৪ই নভেম্বর, ২০২৩।
+
+আমি এখন অনেক দূরে, কিন্তু এই দূরত্ব আমাকে বুঝিয়েছে —
+আমি তোমার ওপর কতটা Addicted।
+তুমি ছাড়া আমার পৃথিবীটা অনেক insipid।
+
+আমি তোমাকে শুধু ভালোবাসি না,
+আমি তোমাকে শ্রদ্ধা করি।
+আমি চাই আমার আগামীর প্রতিটি সকাল তোমার মুখ দেখে শুরু হোক।
+
+অনুরাধা, তুমি কি আমার জীবনসঙ্গিনী হবে?
+
+শুভ জন্মদিন,
+আমার প্রিয় অনুরাধা।
+</pre>
+    <button onclick="nextPage()">অনুরাধার মতামত</button>
+  </div>
+</section>
+
+<!-- PAGE 8 -->
+<section class="page bg8">
+  <div class="card">
+    <h1>Your Words 🤍</h1>
+    <textarea id="herText" placeholder="Write anything you want…"></textarea>
+    <button onclick="submitText()">Submit</button>
+    <div id="finalText">Again Happy Birthday Cutie & I LOVE YOU</div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
