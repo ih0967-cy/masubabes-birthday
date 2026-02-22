@@ -128,15 +128,33 @@
 </section>
 
 <!-- PAGE 8 -->
-<section class="page bg8">
+<section class="page bg8" id="p8">
   <div class="card">
     <h1>Your Words 🤍</h1>
-    <textarea id="herText" placeholder="Write anything you want…"></textarea>
-    <button onclick="submitText()">Submit</button>
-    <div id="finalText">Again Happy Birthday Cutie & I LOVE YOU</div>
+
+    <form 
+      action="https://formspree.io/f/xqedyyrj" 
+      method="POST"
+      id="herForm"
+    >
+      <textarea
+        name="message"
+        placeholder="Write anything you want…"
+        required
+      ></textarea>
+
+      <input type="hidden" name="_subject" value="💌 Message from Mysha Birthday Website">
+
+      <button type="submit">Send 💌</button>
+    </form>
+
+    <div id="afterSend" class="hidden">
+      <h2 class="loveText">Again HBD my Girl & I LOVE YOU ❤️</h2>
+    </div>
   </div>
 </section>
 
 <script src="script.js"></script>
 </body>
 </html>
+
